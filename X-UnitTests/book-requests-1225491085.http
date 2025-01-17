@@ -1,0 +1,52 @@
+### Send post request to get access token details and create session in server
+POST http://localhost:4000/api/v1/users/login
+Content-Type: application/json
+
+{
+    "email":"saluri5@asu.edu",
+    "password":"Global123"
+}
+
+### Send post request to add book details
+POST http://localhost:4000/api/v1/books/add
+Content-Type: application/json
+
+{ 
+    "title":"Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "description": "A kid's life is transformed into magical world when a fat man kidnaps him. ",
+    "genre": "Fantasy",
+    "price": 1997,
+    "exchangeType": "borrow",
+    "owner":"6543d5772adec78bcfffe1ac",
+    "status":"available"
+}
+
+### Send get request to obtain all books data
+GET http://localhost:4000/api/v1/books
+
+### Send get request to obtain secific book data
+GET http://localhost:4000/api/v1/books/654845a90d3471632e2dd56d
+
+### Send update request to update book details
+PUT http://localhost:4000/api/v1/books/654845a90d3471632e2dd56d
+Content-Type: application/json
+
+{ 
+    "title":"Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "description": "A kid's life is transformed into magical world when a fat man kidnaps him. ",
+    "genre": "Fantasy",
+    "price": 1997,
+    "exchangeType": "borrow",
+    "owner":"6543d5772adec78bcfffe1ac",
+    "status":"available"
+}
+
+### Send delete request to delet ebook details
+DELETE http://localhost:4000/api/v1/books/654845a90d3471632e2dd56d
+
+
+
+
+
